@@ -6,7 +6,7 @@ import { Canvas } from "./Canvas";
 import { TextureViewerContainer } from "./styled";
 
 export function useTextureViewer(
-  fbos: (THREE.WebGLRenderTarget | THREE.WebGL3DRenderTarget)[]
+  fbos: (THREE.RenderTarget | THREE.RenderTarget3D)[]
 ) {
   const gl = useThree((state) => state.gl);
   const events = useThree((state) => state.events);

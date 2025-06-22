@@ -1,5 +1,5 @@
 {
-  "name": "clouds",
+  "name": "demo-2025-raymarch-clouds",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,15 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/drei": "^9.109.2",
-    "@react-three/fiber": "^8.16.8",
-    "leva": "^0.9.35",
-    "r3f-perf": "^7.2.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "@react-three/drei": "^10.3.0",
+    "@react-three/fiber": "^9.1.2",
+    "leva": "^0.10.0",
+    "r3f-perf": "^7.2.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
     "simplex-noise": "^4.0.3",
     "styled-components": "^6.1.12",
-    "three": "^0.167.1",
+    "three": "^0.177.0",
     "tunnel-rat": "^0.1.2"
   },
   "devDependencies": {
