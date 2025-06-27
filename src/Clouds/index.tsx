@@ -2,7 +2,6 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { useEffect, useMemo, useRef } from "react";
 import { BackSide, Mesh } from "three";
 import { CloudsRenderer } from "./CloudsRenderer";
-import { useTextureViewer } from "./TextureViewer";
 
 export function Clouds() {
   const targetRef = useRef<Mesh>(null!);
@@ -10,13 +9,13 @@ export function Clouds() {
   const size = useThree((state) => state.size);
   const renderer = useMemo(() => new CloudsRenderer(gl, size), []);
 
-  useTextureViewer(renderer.textures);
+  // useTextureViewer(renderer.textures);
 
   useEffect(() => {
     renderer.resize(size);
   }, [size]);
 
-  useFrame(({ camera, gl, scene }, dt) => {
+  useFrame(({ camera, scene }, dt) => {
     renderer.render(dt, targetRef.current, camera, scene);
   }, 1);
 
