@@ -48,11 +48,11 @@ export class CloudsRenderer {
     this.textureEnvelope = new TextureEnvelope(256, 256);
     this.textureScene = new TextureScene(
       size.width * downSampleFactor,
-      size.height * downSampleFactor
+      size.height * downSampleFactor,
     );
     this.textureCloud = new TextureCloud(
       size.width * downSampleFactor,
-      size.height * downSampleFactor
+      size.height * downSampleFactor,
     );
 
     this.fsQuad = new FullScreenQuad();
@@ -104,14 +104,14 @@ export class CloudsRenderer {
   }
 
   resize(size: Size) {
-    // this.textureScene.setSize(size.width, size.height);
+    this.textureScene.setSize(size.width, size.height);
   }
 
   render(
     dt: number,
     target: THREE.Mesh,
     camera: THREE.Camera,
-    scene: THREE.Scene
+    scene: THREE.Scene,
   ) {
     this._gl.setRenderTarget(this.textureScene);
     this._gl.render(target, camera);

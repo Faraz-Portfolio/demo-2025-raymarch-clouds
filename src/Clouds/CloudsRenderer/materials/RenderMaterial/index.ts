@@ -3,7 +3,7 @@ import { CloudsRenderer } from "../..";
 
 export class RenderMaterial extends THREE.ShaderMaterial {
   declare uniforms: {
-    uMatrixWorldInv: { value: THREE.Matrix };
+    uMatrixWorldInv: { value: THREE.Matrix4 };
     uCameraNearFar: { value: THREE.Vector2 };
     uCameraPosition: { value: THREE.Vector3 };
     uProjectionInverse: { value: THREE.Matrix4 };

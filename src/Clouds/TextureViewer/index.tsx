@@ -6,7 +6,7 @@ import { Canvas } from "./Canvas";
 import { TextureViewerContainer } from "./styled";
 
 export function useTextureViewer(
-  fbos: (THREE.RenderTarget | THREE.RenderTarget3D)[]
+  fbos: (THREE.WebGLRenderTarget | THREE.WebGL3DRenderTarget)[],
 ) {
   const gl = useThree((state) => state.gl);
   const events = useThree((state) => state.events);
@@ -24,7 +24,7 @@ export function useTextureViewer(
         {fbos.map((fbo, index) => (
           <Canvas key={index} fbo={fbo} gl={gl} />
         ))}
-      </TextureViewerContainer>
+      </TextureViewerContainer>,
     );
 
     parentElement.parentElement.style.display = "flex";
